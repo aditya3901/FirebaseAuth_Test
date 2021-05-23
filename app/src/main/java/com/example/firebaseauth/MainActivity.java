@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.btn_logout){
             mAuth.signOut();
-            Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+            Intent intent = new Intent(MainActivity.this, LogInActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
