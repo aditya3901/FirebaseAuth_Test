@@ -1,80 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".SignUpActivity"
-    android:background="#A5A5A5">
+    android:background="@drawable/tele"
+    android:gravity="center"
+    android:padding="10dp"
+    tools:context=".SignUpActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp">
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/favicon" />
+
+        <EditText
+            android:id="@+id/nameET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            app:cardCornerRadius="5dp">
-            <EditText
-                android:inputType="text"
-                android:id="@+id/nameET"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Enter your name"
-                android:background="@color/white"
-                android:padding="12dp"
-                android:textColor="@color/black"/>
-        </androidx.cardview.widget.CardView>
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:padding="9dp" />
 
-        <androidx.cardview.widget.CardView
+        <EditText
+            android:id="@+id/emailET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            app:cardCornerRadius="5dp">
-            <EditText
-                android:inputType="textEmailAddress"
-                android:id="@+id/emailET"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Enter your E-mail ID"
-                android:background="@color/white"
-                android:padding="12dp"
-                android:textColor="@color/black"/>
-        </androidx.cardview.widget.CardView>
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:padding="9dp" />
 
-        <androidx.cardview.widget.CardView
+        <EditText
+            android:id="@+id/passwordET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            app:cardCornerRadius="5dp">
-            <EditText
-                android:inputType="textPassword"
-                android:id="@+id/passwordET"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Enter your Password"
-                android:background="@color/white"
-                android:padding="12dp"
-                android:textColor="@color/black"/>
-        </androidx.cardview.widget.CardView>
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="9dp" />
 
-
-        <Button
-            android:backgroundTint="#128c7e"
-            android:id="@+id/signInBtn"
-            android:layout_margin="12dp"
+        <TextView
+            android:id="@+id/alreadyHaveAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="sign in"
-            android:padding="14dp" />
+            android:layout_gravity="right"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="right"
+            android:padding="3dp"
+            android:text="Already have account"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/signInBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:text="Sign Up"
+            app:cornerRadius="4dp" />
+
+        <Button
+            android:id="@+id/btnGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:padding="15dp"
+            android:text="Google"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="6dp" />
+
 
     </LinearLayout>
+
     <ProgressBar
         android:visibility="invisible"
         android:layout_width="wrap_content"
